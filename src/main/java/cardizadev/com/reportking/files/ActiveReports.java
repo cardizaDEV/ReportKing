@@ -37,4 +37,10 @@ public class ActiveReports {
     public static void reload() {
         customFile = (FileConfiguration)YamlConfiguration.loadConfiguration(file);
     }
+
+    public static void addDefaults() {
+        setup();
+        get().options().copyDefaults(true);
+        save();
+    }
 }

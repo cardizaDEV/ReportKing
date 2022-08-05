@@ -38,16 +38,16 @@ public class Translation {
         customFile = (FileConfiguration)YamlConfiguration.loadConfiguration(file);
     }
 
-    public void addDefaults() {
-        this.setup();
-        this.get().addDefault("Files", "");
-        this.get().addDefault("Files.ActiveReportsSaveFailed", "&cCouldn't save Translation.yml");
-        this.get().addDefault("Files.CommandsSaveFailed", "&cCouldn't save Reports.yml");
-        this.get().addDefault("Files.PermissionsSaveFailed", "&cCouldn't save Reasons.yml");
-        this.get().addDefault("Files.ReportedPlayersSaveFailed", "&cCouldn't save Reasons.yml");
-        this.get().addDefault("Files.SolutionsSaveFailed", "&cCouldn't save Reasons.yml");
-        this.get().addDefault("Files.SolvedReportsSaveFailed", "&cCouldn't save Reasons.yml");
-        this.get().options().copyDefaults(true);
-        this.save();
+    public static void addDefaults() {
+        setup();
+        get().addDefault("Files", "");
+        get().addDefault("Files.ActiveReportsSaveFailed", "&cCouldn't save Translation.yml");
+        get().addDefault("Files.CommandsSaveFailed", "&cCouldn't save Reports.yml");
+        get().addDefault("Files.PermissionsSaveFailed", "&cCouldn't save Reasons.yml");
+        get().addDefault("Files.ReportedPlayersSaveFailed", "&cCouldn't save Reasons.yml");
+        get().addDefault("Files.SolutionsSaveFailed", "&cCouldn't save Reasons.yml");
+        get().addDefault("Files.SolvedReportsSaveFailed", "&cCouldn't save Reasons.yml");
+        get().options().copyDefaults(true);
+        save();
     }
 }

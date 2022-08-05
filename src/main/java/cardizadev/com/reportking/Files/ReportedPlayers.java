@@ -8,13 +8,13 @@ import org.bukkit.configuration.file.YamlConfiguration;
 import java.io.File;
 import java.io.IOException;
 
-public class Reasons {
+public class ReportedPlayers {
     private static File file;
 
     private static FileConfiguration customFile;
 
     public static void setup() {
-        file = new File(Bukkit.getServer().getPluginManager().getPlugin("ReportKing").getDataFolder(), "Reasons.yml");
+        file = new File(Bukkit.getServer().getPluginManager().getPlugin("ReportKing").getDataFolder(), "ReportedPlayers.yml");
         if (!file.exists())
             try {
                 file.createNewFile();
@@ -30,7 +30,7 @@ public class Reasons {
         try {
             customFile.save(file);
         } catch (IOException e) {
-            System.out.println(ColorParser.parseColor(Translation.get().getString("Files.ReasonsSaveFailed")));
+            System.out.println(ColorParser.parseColor(Translation.get().getString("Files.ReportedPlayersSaveFailed")));
         }
     }
 

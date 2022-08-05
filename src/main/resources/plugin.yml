@@ -2,3 +2,5 @@ name: ReportKing
 version: '${project.version}'
 main: cardizadev.com.reportking.Main
 api-version: 1.19
+authors: [ cardizaDEV ]
+description: A simple system for making reports and solving them

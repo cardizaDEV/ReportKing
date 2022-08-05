@@ -37,4 +37,17 @@ public class Translation {
     public static void reload() {
         customFile = (FileConfiguration)YamlConfiguration.loadConfiguration(file);
     }
+
+    public void addDefaults() {
+        this.setup();
+        this.get().addDefault("Files", "");
+        this.get().addDefault("Files.ActiveReportsSaveFailed", "&cCouldn't save Translation.yml");
+        this.get().addDefault("Files.CommandsSaveFailed", "&cCouldn't save Reports.yml");
+        this.get().addDefault("Files.PermissionsSaveFailed", "&cCouldn't save Reasons.yml");
+        this.get().addDefault("Files.ReportedPlayersSaveFailed", "&cCouldn't save Reasons.yml");
+        this.get().addDefault("Files.SolutionsSaveFailed", "&cCouldn't save Reasons.yml");
+        this.get().addDefault("Files.SolvedReportsSaveFailed", "&cCouldn't save Reasons.yml");
+        this.get().options().copyDefaults(true);
+        this.save();
+    }
 }

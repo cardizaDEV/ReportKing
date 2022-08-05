@@ -1,6 +1,6 @@
-package cardizadev.com.reportking.Files;
+package cardizadev.com.reportking.files;
 
-import cardizadev.com.reportking.Utils.ColorParser;
+import cardizadev.com.reportking.utils.ColorParser;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;

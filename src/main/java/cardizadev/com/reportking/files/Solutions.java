@@ -1,6 +1,6 @@
-package cardizadev.com.reportking.Files;
+package cardizadev.com.reportking.files;
 
-import cardizadev.com.reportking.Utils.ColorParser;
+import cardizadev.com.reportking.utils.ColorParser;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -8,13 +8,13 @@ import org.bukkit.configuration.file.YamlConfiguration;
 import java.io.File;
 import java.io.IOException;
 
-public class ActiveReports {
+public class Solutions {
     private static File file;
 
     private static FileConfiguration customFile;
 
     public static void setup() {
-        file = new File(Bukkit.getServer().getPluginManager().getPlugin("ReportKing").getDataFolder(), "ActiveReports.yml");
+        file = new File(Bukkit.getServer().getPluginManager().getPlugin("ReportKing").getDataFolder(), "Solutions.yml");
         if (!file.exists())
             try {
                 file.createNewFile();
@@ -30,7 +30,7 @@ public class ActiveReports {
         try {
             customFile.save(file);
         } catch (IOException e) {
-            System.out.println(ColorParser.parseColor(Translation.get().getString("Files.ActiveReportsSaveFailed")));
+            System.out.println(ColorParser.parseColor(Translation.get().getString("Files.SolutionsSaveFailed")));
         }
     }
 

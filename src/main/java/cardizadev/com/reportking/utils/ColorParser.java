@@ -1,4 +1,4 @@
-package cardizadev.com.reportking.Utils;
+package cardizadev.com.reportking.utils;
 
 import org.bukkit.ChatColor;
 

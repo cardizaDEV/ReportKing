@@ -1,4 +1,4 @@
-package cardizadev.com.reportking.Events;
+package cardizadev.com.reportking.events;
 
 import cardizadev.com.reportking.GUI.GUIReasonsList;
 import cardizadev.com.reportking.files.ActiveReports;

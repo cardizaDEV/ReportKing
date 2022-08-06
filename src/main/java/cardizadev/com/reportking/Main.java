@@ -1,7 +1,7 @@
 package cardizadev.com.reportking;
 
-import cardizadev.com.reportking.Events.PlayerListGUIEvents;
-import cardizadev.com.reportking.Events.ReasonsListGUIEvents;
+import cardizadev.com.reportking.events.PlayerListGUIEvents;
+import cardizadev.com.reportking.events.ReasonsListGUIEvents;
 import cardizadev.com.reportking.commands.*;
 import cardizadev.com.reportking.files.*;
 import org.bukkit.Bukkit;

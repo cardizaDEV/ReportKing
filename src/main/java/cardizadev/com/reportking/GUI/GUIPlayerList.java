@@ -8,15 +8,13 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
-import java.util.ArrayList;
-import java.util.List;
+
 
 public class GUIPlayerList {
     public static String tittle = ColorParser.parseColor(Translation.get().getString("GUI.PlayerList") + " #");
 
     public static Inventory players(Player player, int page) {
         int i = 1;
-        List<Player> playlist = new ArrayList<>(Bukkit.getOnlinePlayers());
         Inventory online = Bukkit.createInventory(null, 54, tittle + page);
         int first = 45 * (page - 1) + 1;
         int last = 45 * page;

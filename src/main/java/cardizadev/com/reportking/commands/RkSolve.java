@@ -3,7 +3,6 @@ package cardizadev.com.reportking.commands;
 import cardizadev.com.reportking.files.Commands;
 import cardizadev.com.reportking.files.Permissions;
 import cardizadev.com.reportking.files.Translation;
-import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.defaults.BukkitCommand;
 

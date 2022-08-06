@@ -40,7 +40,12 @@ public class Permissions {
 
     public static void addDefaults() {
         setup();
-
+        get().addDefault("Permissions", "");
+        get().addDefault("Permissions.Help", "rk.help");
+        get().addDefault("Permissions.ReportedPlayers", "rk.list");
+        get().addDefault("Permissions.Reload", "rk.reload");
+        get().addDefault("Permissions.Report", "rk.report");
+        get().addDefault("Permissions.Solve", "rk.solve");
         get().options().copyDefaults(true);
         save();
     }

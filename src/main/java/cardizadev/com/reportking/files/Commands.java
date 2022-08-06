@@ -40,7 +40,12 @@ public class Commands {
 
     public static void addDefaults() {
         setup();
-
+        get().addDefault("Commands", "");
+        get().addDefault("Commands.Help", "rkhelp");
+        get().addDefault("Commands.ReportedPlayers", "rklist");
+        get().addDefault("Commands.Reload", "rkreload");
+        get().addDefault("Commands.Report", "rkreport");
+        get().addDefault("Commands.Solve", "rksolve");
         get().options().copyDefaults(true);
         save();
     }

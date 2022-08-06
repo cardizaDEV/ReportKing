@@ -9,13 +9,13 @@ import org.bukkit.command.defaults.BukkitCommand;
 
 import java.util.ArrayList;
 
-public class RkReport extends BukkitCommand {
+public class RkReportedPlayers extends BukkitCommand {
 
-    public RkReport(String name) {
+    public RkReportedPlayers(String name) {
         super(name);
-        this.description = Translation.get().getString("Description.Report");
-        this.usageMessage = "/" + Commands.get().getString("Commands.Report") + " <player>";
-        this.setPermission(Permissions.get().getString("Permissions.Report"));
+        this.description = Translation.get().getString("Description.ReportedPlayers");
+        this.usageMessage = "/" + Commands.get().getString("Commands.ReportedPlayers");// + " <player>";
+        this.setPermission(Permissions.get().getString("Permissions.ReportedPlayers"));
         this.setAliases(new ArrayList<String>());
     }
 

@@ -13,14 +13,17 @@ public class PlayerListGUIEvents implements Listener {
 
     @EventHandler
     public void move(InventoryClickEvent e) {
-        if (e.getView().getTitle().contains(GUIPlayerList.tittle))
+        if (e.getView().getTitle().contains(GUIPlayerList.tittle)){
             e.setCancelled(true);
+        }
+
     }
 
     @EventHandler
     public void drag(InventoryDragEvent e) {
-        if (e.getView().getTitle().contains(GUIPlayerList.tittle))
+        if (e.getView().getTitle().contains(GUIPlayerList.tittle)) {
             e.setCancelled(true);
+        }
     }
 
     @EventHandler

@@ -16,14 +16,16 @@ public class ReasonsListGUIEvents implements Listener {
 
     @EventHandler
     public void move(InventoryClickEvent e) {
-        if (e.getView().getTitle().contains(GUIReasonsList.tittle))
+        if (e.getView().getTitle().contains(GUIReasonsList.tittle)) {
             e.setCancelled(true);
+        }
     }
 
     @EventHandler
     public void drag(InventoryDragEvent e) {
-        if (e.getView().getTitle().contains(GUIReasonsList.tittle))
+        if (e.getView().getTitle().contains(GUIReasonsList.tittle)) {
             e.setCancelled(true);
+        }
     }
 
     @EventHandler
@@ -54,7 +56,7 @@ public class ReasonsListGUIEvents implements Listener {
                     player.closeInventory();
                 }
             }
+            e.setCancelled(true);
         }
-        e.setCancelled(true);
     }
 }

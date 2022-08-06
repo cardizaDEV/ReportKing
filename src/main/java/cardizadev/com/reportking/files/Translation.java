@@ -50,7 +50,6 @@ public class Translation {
 
         get().addDefault("Description", "");
         get().addDefault("Description.Help", "Show ReportKing command list");
-        get().addDefault("Description.ReportedPlayers", "Opens the reported players GUI");
         get().addDefault("Description.Reload", "Reload ReportKing config");
         get().addDefault("Description.Report", "Opens the report GUI");
         get().addDefault("Description.Solve", "Opens the existing reports GUI");
@@ -71,7 +70,6 @@ public class Translation {
         get().addDefault("GUI","");
         get().addDefault("GUI.PlayerList","&bPlayers:");
         get().addDefault("GUI.Reasons","&bReasons:");
-        get().addDefault("GUI.ReportsList","&bReports:");
         get().addDefault("GUI.Solutions","&bSolutions:");
         get().addDefault("GUI.Reason","&7Reason: ");
         get().addDefault("GUI.SubmittedBy","&7Who submmited: ");

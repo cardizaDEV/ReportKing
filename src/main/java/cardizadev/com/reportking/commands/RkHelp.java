@@ -30,7 +30,6 @@ public class RkHelp extends BukkitCommand {
                     player.sendMessage("/" + Commands.get().getString("Commands.Help") + ": " + Translation.get().getString("Description.Help"));
                     player.sendMessage("/" + Commands.get().getString("Commands.Reload") + ": " + Translation.get().getString("Description.Reload"));
                     player.sendMessage("/" + Commands.get().getString("Commands.Report") + " <player>" + ": " + Translation.get().getString("Description.Report"));
-                    player.sendMessage("/" + Commands.get().getString("Commands.ReportedPlayers") + ": " + Translation.get().getString("Description.ReportedPlayers"));
                     player.sendMessage("/" + Commands.get().getString("Commands.Solve") + ": " + Translation.get().getString("Description.Solve"));
                     player.sendMessage(ColorParser.parseColor(Translation.get().getString("Defaults.Footer")));
                 }else{
@@ -41,7 +40,6 @@ public class RkHelp extends BukkitCommand {
                 System.out.println("/" + Commands.get().getString("Commands.Help") + ": " + Translation.get().getString("Description.Help"));
                 System.out.println("/" + Commands.get().getString("Commands.Reload") + ": " + Translation.get().getString("Description.Reload"));
                 System.out.println("/" + Commands.get().getString("Commands.Report") + " <player>" + ": " + Translation.get().getString("Description.Report"));
-                System.out.println("/" + Commands.get().getString("Commands.ReportedPlayers") + ": " + Translation.get().getString("Description.ReportedPlayers"));
                 System.out.println("/" + Commands.get().getString("Commands.Solve") + ": " + Translation.get().getString("Description.Solve"));
                 System.out.println(ColorParser.parseColor(Translation.get().getString("Defaults.Footer")));
             }

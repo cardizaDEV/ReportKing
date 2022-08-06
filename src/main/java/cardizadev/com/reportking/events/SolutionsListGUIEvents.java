@@ -1,0 +1,51 @@
+package cardizadev.com.reportking.events;
+
+import cardizadev.com.reportking.GUI.GUISolveReport;
+import cardizadev.com.reportking.files.ActiveReports;
+import cardizadev.com.reportking.files.Solutions;
+import cardizadev.com.reportking.files.Translation;
+import cardizadev.com.reportking.utils.ActualTime;
+import cardizadev.com.reportking.utils.ColorParser;
+import org.bukkit.ChatColor;
+import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
+import org.bukkit.event.inventory.InventoryClickEvent;
+import org.bukkit.event.inventory.InventoryDragEvent;
+
+public class SolutionsListGUIEvents implements Listener {
+    @EventHandler
+    public void move(InventoryClickEvent e) {
+        if (e.getView().getTitle().contains(GUISolveReport.tittle)) {
+            e.setCancelled(true);
+        }
+    }
+
+    @EventHandler
+    public void drag(InventoryDragEvent e) {
+        if (e.getView().getTitle().contains(GUISolveReport.tittle)) {
+            e.setCancelled(true);
+        }
+    }
+
+    @EventHandler
+    public void onClick(InventoryClickEvent e) {
+        if (e.getView().getTitle().contains(GUISolveReport.tittle)) {
+            if (e.getClick().isLeftClick()) {
+                Player player = (Player) e.getWhoClicked();
+                if (!e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase(" ")) {
+                    String path = ChatColor.stripColor(e.getCurrentItem().getItemMeta().getLore().get(0));
+                    Solutions.get().set(path,null);
+                    ActiveReports.get().set(path + "." + Translation.get().getString("ActiveReportsFile.SubmittedBy"),null);
+                    ActiveReports.get().set(path + "." + Translation.get().getString("ActiveReportsFile.Reason"), null);
+                    ActiveReports.get().set(path + "." + Translation.get().getString("ActiveReportsFile.Time"), null);
+                    ActiveReports.get().options().copyDefaults(true);
+                    ActiveReports.save();
+                    player.sendMessage(ColorParser.parseColor(Translation.get().getString("Defaults.ReportSolvedSuccessfully")));
+                    player.closeInventory();
+                }
+            }
+            e.setCancelled(true);
+        }
+    }
+}

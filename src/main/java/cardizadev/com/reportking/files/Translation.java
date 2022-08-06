@@ -66,6 +66,7 @@ public class Translation {
         get().addDefault("Defaults.Back","Back");
         get().addDefault("Defaults.Forward","Forward");
         get().addDefault("Defaults.PlayerReportedSuccessfully","&aThe player has been reported successfully");
+        get().addDefault("Defaults.ReportSolvedSuccessfully","&aThe report has been solved successfully");
 
         get().addDefault("GUI","");
         get().addDefault("GUI.PlayerList","&bPlayers:");
@@ -75,7 +76,6 @@ public class Translation {
         get().addDefault("GUI.Reason","&7Reason: ");
         get().addDefault("GUI.SubmittedBy","&7Who submmited: ");
         get().addDefault("GUI.Time","&7Time: ");
-
 
         get().addDefault("ActiveReportsFile","");
         get().addDefault("ActiveReportsFile.Reason","Reason: ");

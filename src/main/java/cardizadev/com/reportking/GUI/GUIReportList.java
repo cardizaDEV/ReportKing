@@ -25,7 +25,9 @@ public class GUIReportList {
                 String reason = ActiveReports.get().getString(key + "." + Translation.get().getString("ActiveReportsFile.Reason"));
                 String whosubmmited = ActiveReports.get().getString(key + "." + Translation.get().getString("ActiveReportsFile.SubmittedBy"));
                 String time = ActiveReports.get().getString(key + "." + Translation.get().getString("ActiveReportsFile.Time"));
-                reports.addItem(new ItemStack[] { ItemGUI.report(name, reason, whosubmmited, time) });
+                if(reason!=null && whosubmmited!=null && time!=null) {
+                    reports.addItem(new ItemStack[]{ItemGUI.report(name, reason, whosubmmited, time)});
+                }
             }
         }
         reports.setItem(53, ItemGUI.forward(player));

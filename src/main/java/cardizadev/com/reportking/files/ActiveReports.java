@@ -43,4 +43,10 @@ public class ActiveReports {
         get().options().copyDefaults(true);
         save();
     }
+
+    public static void removeKey(String key){
+        for(String keys:get().getKeys(false)){
+            get().set(key,null);
+        }
+    }
 }

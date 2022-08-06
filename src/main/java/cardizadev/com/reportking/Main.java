@@ -4,6 +4,7 @@ import cardizadev.com.reportking.events.PlayerListGUIEvents;
 import cardizadev.com.reportking.events.ReasonsListGUIEvents;
 import cardizadev.com.reportking.commands.*;
 import cardizadev.com.reportking.events.ReportListGUIEvents;
+import cardizadev.com.reportking.events.SolutionsListGUIEvents;
 import cardizadev.com.reportking.files.*;
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandMap;
@@ -31,6 +32,7 @@ public final class Main extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new PlayerListGUIEvents(),(Plugin) this);
         getServer().getPluginManager().registerEvents(new ReasonsListGUIEvents(),(Plugin) this);
         getServer().getPluginManager().registerEvents(new ReportListGUIEvents(),(Plugin) this);
+        getServer().getPluginManager().registerEvents(new SolutionsListGUIEvents(),(Plugin) this);
     }
 
     public void addAllDefaults(){

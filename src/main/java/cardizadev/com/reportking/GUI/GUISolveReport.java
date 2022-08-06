@@ -43,6 +43,7 @@ public class GUISolveReport {
                 meta.setDisplayName(ColorParser.parseColor(Solutions.get().getString(String.valueOf(slot) + ".Name")));
                 meta.addItemFlags(new ItemFlag[]{ItemFlag.HIDE_ATTRIBUTES});
                 List<String> description = new ArrayList<>();
+                description.add(ColorParser.parseColor("&7") + report);
                 description.add(ColorParser.parseColor(Solutions.get().getString(String.valueOf(slot) + ".Description")));
                 meta.setLore(description);
                 reason.setItemMeta(meta);

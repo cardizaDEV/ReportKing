@@ -29,7 +29,7 @@ public class RkReportedPlayers extends BukkitCommand {
             if(sender instanceof Player){
                 Player player = (Player) sender;
                 if(player.hasPermission(Permissions.get().getString("Permissions.ReportedPlayers"))){
-                    player.openInventory(GUIReportedPlayers.reason(player, ChatColor.stripColor(reportedPlayer.getDisplayName())));
+                    //player.openInventory(GUIReportedPlayers.reason(player, ChatColor.stripColor(reportedPlayer.getDisplayName())));
                 }else{
                     player.sendMessage(ColorParser.parseColor(Translation.get().getString("Permissions.NonPermission")));
                 }

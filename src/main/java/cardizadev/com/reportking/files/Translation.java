@@ -70,6 +70,12 @@ public class Translation {
         get().addDefault("GUI","");
         get().addDefault("GUI.PlayerList","&bPlayers:");
         get().addDefault("GUI.Reasons","&bReasons:");
+        get().addDefault("GUI.ReportsList","&bReports:");
+        get().addDefault("GUI.Solutions","&bSolutions:");
+        get().addDefault("GUI.Reason","&7Reason: ");
+        get().addDefault("GUI.SubmittedBy","&7Who submmited: ");
+        get().addDefault("GUI.Time","&7Time: ");
+
 
         get().addDefault("ActiveReportsFile","");
         get().addDefault("ActiveReportsFile.Reason","Reason: ");

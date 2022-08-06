@@ -12,14 +12,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ItemGUI {
-    public static ItemStack report(String name, String reason, String whosubmmited, String time, int reports) {
+    public static ItemStack report(String name, String reason, String whosubmmited, String time) {
         ItemStack report = new ItemStack(Material.PAPER);
         ItemMeta meta1 = report.getItemMeta();
         meta1.setDisplayName(name);
         List<String> lore = new ArrayList<>();
-        lore.add(ColorParser.parseColor(Translation.get().getString("GUI.Reason") + reason));
-        lore.add(ColorParser.parseColor(Translation.get().getString("GUI.SubmittedBy") + whosubmmited));
-        lore.add(ColorParser.parseColor(Translation.get().getString("GUI.Time") + time));
+        lore.add(ColorParser.parseColor(Translation.get().getString("GUI.Reason") + " " + reason));
+        lore.add(ColorParser.parseColor(Translation.get().getString("GUI.SubmittedBy") + " " + whosubmmited));
+        lore.add(ColorParser.parseColor(Translation.get().getString("GUI.Time") + " " + time));
         meta1.setLore(lore);
         report.setItemMeta(meta1);
         return report;

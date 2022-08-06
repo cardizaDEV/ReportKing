@@ -40,7 +40,18 @@ public class Solutions {
 
     public static void addDefaults() {
         setup();
-
+        Solutions.get().addDefault(String.valueOf(0), "");
+        Solutions.get().addDefault(String.valueOf(0)+ ".Name", "&4ExampleName");
+        Solutions.get().addDefault(String.valueOf(0)+ ".Item", "CARROT");
+        Solutions.get().addDefault(String.valueOf(0)+ ".Description", "ExampleDescription");
+        Solutions.get().addDefault(String.valueOf(0)+ ".Command", "ban {player}");
+        for (int slot = 1; slot < 54; slot++) {
+            Solutions.get().addDefault(String.valueOf(slot), "");
+            Solutions.get().addDefault(String.valueOf(slot)+ ".Name", "NULL");
+            Solutions.get().addDefault(String.valueOf(slot)+ ".Item", "NULL");
+            Solutions.get().addDefault(String.valueOf(slot)+ ".Description", "NULL");
+            Solutions.get().addDefault(String.valueOf(slot)+ ".Command", "NULL");
+        }
         get().options().copyDefaults(true);
         save();
     }

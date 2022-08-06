@@ -59,6 +59,14 @@ public class Translation {
         get().addDefault("Defaults.Header","&d&l---------&b&lReportKing&d&l---------");
         get().addDefault("Defaults.Footer","&d&l---------&b&lReportKing&d&l---------");
         get().addDefault("Defaults.Reload","&d&lReloaded successfully");
+        get().addDefault("Defaults.NoPlayer","You need to be a player!");
+        get().addDefault("Defaults.Back","Back");
+        get().addDefault("Defaults.Forward","Forward");
+        get().addDefault("GUI","");
+        get().addDefault("GUI.PlayerList","&b&lPlayers:");
+        get().addDefault("GUI.Reason","&fReason: &7");
+        get().addDefault("GUI.SubmittedBy","&fWho submmited: &7");
+        get().addDefault("GUI.Time","&fTime: &7");
         get().options().copyDefaults(true);
         save();
     }

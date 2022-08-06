@@ -65,6 +65,7 @@ public class Translation {
         get().addDefault("Defaults.NoPlayer","You need to be a player!");
         get().addDefault("Defaults.Back","Back");
         get().addDefault("Defaults.Forward","Forward");
+        get().addDefault("Defaults.PlayerReportedSuccessfully","&aThe player has been reported successfully");
 
         get().addDefault("GUI","");
         get().addDefault("GUI.PlayerList","&bPlayers:");

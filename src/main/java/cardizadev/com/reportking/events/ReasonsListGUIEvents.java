@@ -5,6 +5,7 @@ import cardizadev.com.reportking.files.ActiveReports;
 import cardizadev.com.reportking.files.ReportedPlayers;
 import cardizadev.com.reportking.files.Translation;
 import cardizadev.com.reportking.utils.ActualTime;
+import cardizadev.com.reportking.utils.ColorParser;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -54,6 +55,7 @@ public class ReasonsListGUIEvents implements Listener {
                     ActiveReports.get().options().copyDefaults(true);
                     ActiveReports.save();
                     player.closeInventory();
+                    player.sendMessage(ColorParser.parseColor(Translation.get().getString("Defaults.PlayerReportedSuccessfully")));
                 }
             }
             e.setCancelled(true);

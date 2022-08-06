@@ -49,10 +49,15 @@ public class Translation {
         get().addDefault("Files.SolvedReportsSaveFailed", "&cCouldn't save Reasons.yml");
         get().addDefault("Description", "");
         get().addDefault("Description.Help", "Show ReportKing command list");
-        get().addDefault("Description.List", "Opens the reported players GUI");
+        get().addDefault("Description.ReportedPlayers", "Opens the reported players GUI");
         get().addDefault("Description.Reload", "Reload ReportKing config");
         get().addDefault("Description.Report", "Opens the report GUI");
         get().addDefault("Description.Solve", "Opens the existing reports GUI");
+        get().addDefault("Permissions","");
+        get().addDefault("Permissions.NonPermission","&cYou do not have enough permissions");
+        get().addDefault("Defaults","");
+        get().addDefault("Defaults.Header","&d&l---------&b&lReportKing&d&l---------");
+        get().addDefault("Defaults.Footer","&d&l---------&b&lReportKing&d&l---------");
         get().options().copyDefaults(true);
         save();
     }

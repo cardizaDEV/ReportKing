@@ -47,7 +47,7 @@ public class Translation {
         get().addDefault("Files.ReportedPlayersSaveFailed", "&cCouldn't save Reasons.yml");
         get().addDefault("Files.SolutionsSaveFailed", "&cCouldn't save Reasons.yml");
         get().addDefault("Files.SolvedReportsSaveFailed", "&cCouldn't save Reasons.yml");
-        get().addDefault("Usages", "");
+        get().addDefault("Description", "");
         get().addDefault("Description.Help", "Show ReportKing command list");
         get().addDefault("Description.List", "Opens the reported players GUI");
         get().addDefault("Description.Reload", "Reload ReportKing config");

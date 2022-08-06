@@ -46,11 +46,11 @@ public final class Main extends JavaPlugin {
             bukkitCommandMap.setAccessible(true);
             CommandMap commandMap = (CommandMap) bukkitCommandMap.get(Bukkit.getServer());
 
-            commandMap.register(Translation.get().getString("Commands.Help"), new RkHelp(Translation.get().getString("Commands.Help")));
-            commandMap.register(Translation.get().getString("Commands.ReportedPlayers"), new RkHelp(Translation.get().getString("Commands.ReportedPlayers")));
-            commandMap.register(Translation.get().getString("Commands.Reload"), new RkHelp(Translation.get().getString("Commands.Reload")));
-            commandMap.register(Translation.get().getString("Commands.Report"), new RkHelp(Translation.get().getString("Commands.Report")));
-            commandMap.register(Translation.get().getString("Commands.Solve"), new RkHelp(Translation.get().getString("Commands.Solve")));
+            commandMap.register(Commands.get().getString("Commands.Help"), new RkHelp(Commands.get().getString("Commands.Help")));
+            commandMap.register(Commands.get().getString("Commands.ReportedPlayers"), new RkHelp(Commands.get().getString("Commands.ReportedPlayers")));
+            commandMap.register(Commands.get().getString("Commands.Reload"), new RkHelp(Commands.get().getString("Commands.Reload")));
+            commandMap.register(Commands.get().getString("Commands.Report"), new RkHelp(Commands.get().getString("Commands.Report")));
+            commandMap.register(Commands.get().getString("Commands.Solve"), new RkHelp(Commands.get().getString("Commands.Solve")));
         }catch (NoSuchFieldException nsfe){
             nsfe.printStackTrace();
         }catch (IllegalAccessException iae){

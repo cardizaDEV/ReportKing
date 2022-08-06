@@ -40,6 +40,16 @@ public class Reasons {
 
     public static void addDefaults() {
         setup();
+        Reasons.get().addDefault(String.valueOf(0), "");
+        Reasons.get().addDefault(String.valueOf(0)+ ".Name", "&4ExampleName");
+        Reasons.get().addDefault(String.valueOf(0)+ ".Item", "IRON_SWORD");
+        Reasons.get().addDefault(String.valueOf(0)+ ".Description", "ExampleDescription");
+        for (int slot = 1; slot < 54; slot++) {
+            Reasons.get().addDefault(String.valueOf(slot), "");
+            Reasons.get().addDefault(String.valueOf(slot)+ ".Name", "NULL");
+            Reasons.get().addDefault(String.valueOf(slot)+ ".Item", "NULL");
+            Reasons.get().addDefault(String.valueOf(slot)+ ".Description", "NULL");
+        }
         get().options().copyDefaults(true);
         save();
     }

@@ -1,9 +1,12 @@
 package cardizadev.com.reportking;
 
+import cardizadev.com.reportking.Events.PlayerListGUIEvents;
+import cardizadev.com.reportking.Events.ReasonsListGUIEvents;
 import cardizadev.com.reportking.commands.*;
 import cardizadev.com.reportking.files.*;
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandMap;
+import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.lang.reflect.Field;
@@ -14,6 +17,7 @@ public final class Main extends JavaPlugin {
     public void onEnable() {
         addAllDefaults();
         loadCommands();
+        registerAllEventListeners();
     }
 
     @Override
@@ -22,11 +26,10 @@ public final class Main extends JavaPlugin {
     }
 
 
-
-
-
-
-
+    public void registerAllEventListeners(){
+        getServer().getPluginManager().registerEvents(new PlayerListGUIEvents(),(Plugin) this);
+        getServer().getPluginManager().registerEvents(new ReasonsListGUIEvents(),(Plugin) this);
+    }
 
     public void addAllDefaults(){
         Translation.addDefaults();

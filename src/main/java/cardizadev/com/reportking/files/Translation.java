@@ -58,6 +58,7 @@ public class Translation {
         get().addDefault("Defaults","");
         get().addDefault("Defaults.Header","&d&l---------&b&lReportKing&d&l---------");
         get().addDefault("Defaults.Footer","&d&l---------&b&lReportKing&d&l---------");
+        get().addDefault("Defaults.Reload","&d&lReloaded successfully");
         get().options().copyDefaults(true);
         save();
     }

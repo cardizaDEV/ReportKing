@@ -40,7 +40,6 @@ public class Reasons {
 
     public static void addDefaults() {
         setup();
-
         get().options().copyDefaults(true);
         save();
     }

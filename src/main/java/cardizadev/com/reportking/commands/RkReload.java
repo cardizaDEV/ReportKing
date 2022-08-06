@@ -1,10 +1,10 @@
 package cardizadev.com.reportking.commands;
 
-import cardizadev.com.reportking.files.Commands;
-import cardizadev.com.reportking.files.Permissions;
-import cardizadev.com.reportking.files.Translation;
+import cardizadev.com.reportking.files.*;
+import cardizadev.com.reportking.utils.ColorParser;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.defaults.BukkitCommand;
+import org.bukkit.entity.Player;
 
 import java.util.ArrayList;
 
@@ -20,6 +20,31 @@ public class RkReload extends BukkitCommand {
 
     @Override
     public boolean execute(CommandSender sender, String alias, String[] args) {
+        if(args.length == 0){
+            if(sender instanceof Player){
+                Player player = (Player) sender;
+                if(player.hasPermission(Permissions.get().getString("Permissions.Reload"))){
+                    addAllDefaults();
+                    player.sendMessage(ColorParser.parseColor(Translation.get().getString("Defaults.Reload")));
+                }else{
+                    player.sendMessage(ColorParser.parseColor(Translation.get().getString("Permissions.NonPermission")));
+                }
+            }else{
+                addAllDefaults();
+                System.out.println(ColorParser.parseColor(Translation.get().getString("Defaults.Reload")));
+            }
+        }
         return true;
+    }
+
+    public void addAllDefaults(){
+        Translation.addDefaults();
+        SolvedReports.addDefaults();
+        Solutions.addDefaults();
+        ReportedPlayers.addDefaults();
+        Reasons.addDefaults();
+        Permissions.addDefaults();
+        Commands.addDefaults();
+        ActiveReports.addDefaults();
     }
 }

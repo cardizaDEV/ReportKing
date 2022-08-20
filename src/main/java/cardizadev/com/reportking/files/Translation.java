@@ -69,6 +69,7 @@ public class Translation {
 
         get().addDefault("GUI","");
         get().addDefault("GUI.PlayerList","&bPlayers:");
+        get().addDefault("GUI.ReportsList","&bReports:");
         get().addDefault("GUI.Reasons","&bReasons:");
         get().addDefault("GUI.Solutions","&bSolutions:");
         get().addDefault("GUI.Reason","&7Reason: ");
